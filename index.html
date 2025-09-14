@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="./style.css"/>
+    <title>Bubu Workout </title>
+</head>
+<body>
+    <div class="Image">
+        <img src="./gifs/bubu-dudu-bubu-dudu-stickers.gif" />
+        <p>🏋️‍♂️"Hey Bubu, <strong>here is your workout plan.</strong> "</p>
+    </div>
+    <div id="quotes"></div>
+    <div class="Buttons">
+    <a href="./days/Monday.html"><button >Monday</button></a>
+    <a href="./days/Tuesday.html"><button>Tuesday</button></a>
+    <a href="./days/Wednesday.html"><button>Wednesday</button></a>
+    <a href="./days/Thursday.html"><button>Thursday</button></a>
+    <a href="./days/Friday.html"><button>Friday</button></a>
+    <a href="./days/Saturday.html"><button>Saturday</button></a>
+    </div>
+    <script>
+     const buttons = document.querySelectorAll("button");
+     const quotes = [
+         "You don’t have to be great to start, but you have to start to be great.",
+         "The only bad workout is the one that didn’t happen.",
+         "Sweat is just fat crying.",
+         "Success isn’t always about greatness. It’s about consistency. Consistent hard work gains success.",
+         "Don’t count the days, make the days count.",
+          "Today I will do what others won’t, so tomorrow I can do what others can’t."
+       ];
+      
+       const quoteContainer = document.getElementById("quotes");  
+       
+       
+       const today = new Date().getDay(); 
+   
+       let index = today - 1; 
+       
+       if (index < 0 || index > 5) index = 0; 
+      
+       quoteContainer.textContent = quotes[index];
+
+       buttons[index].classList.add("active");
+    
+  
+</script>
+
+  
+</body>
+</html>
